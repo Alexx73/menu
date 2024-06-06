@@ -29,7 +29,8 @@ public class Principal {
 				break;
 			}
 			case "3": {
-				Collections.sort(listAlumnos);
+				//Collections.sort(listAlumnos);
+				Collections.sort(listAlumnos,Comparator.comparing(Alumno::getNombre).thenComparing(Alumno::getApellido).thenComparing(Alumno::getDni));
 				MostrarLista(listAlumnos);
 				break;
 			}
